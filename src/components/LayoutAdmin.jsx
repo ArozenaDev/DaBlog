@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 export default function LayoutAdmin() {
@@ -10,7 +9,7 @@ export default function LayoutAdmin() {
     </a>
     <ul className="nav nav-pills flex-column mb-auto" style={{paddingTop: '20px'}}>
       <li className="nav-item">
-        <a href="#" className="nav-link active" aria-current="page">
+        <a href="/admin" className="nav-link text-white" aria-current="page">
           <svg className="bi pe-none me-2" width="16" height="16"></svg>
           Listado de posts
         </a>
@@ -20,12 +19,6 @@ export default function LayoutAdmin() {
           <svg className="bi pe-none me-2" width="16" height="16"></svg>
           Nuevo post
         </Link>
-      </li>
-      <li>
-        <a href="#" className="nav-link text-white">
-          <svg className="bi pe-none me-2" width="16" height="16"></svg>
-          Editar post
-        </a>
       </li>
     </ul>
   </div>

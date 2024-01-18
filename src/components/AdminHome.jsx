@@ -13,6 +13,15 @@ export default function AdminHome() {
       .catch((error) => console.log("ERROR", error.message));
   };
 
+  const removePost = (id) => {
+    axios
+      .delete(`http://localhost:3000/posts/${id}`)
+      .then(() => {
+        getPosts();
+      })
+      .catch((error) => console.log("ERROR", error.message));
+  };
+
   useEffect(() => {
     getPosts();
   }, []);
@@ -28,11 +37,12 @@ export default function AdminHome() {
               <div className="d-flex justify-content-between align-items-center">
                 <div className="btn-group">
                   <button type="button" className="btn btn-sm btn-outline-secondary">
-                    <Link to = {`post/${e.id}`} className="link-offset-2 link-underline link-underline-opacity-0">Editar</Link></button>
+                    <Link to = {`post-edit/${e.id}`} className="link-offset-2 link-underline link-underline-opacity-0">Editar</Link></button>
                 </div>
                 <div className="btn-group">
-                    <button type="button" className="btn btn-sm btn-outline-danger">
-                    <Link to = {`post/${e.id}`} className="link-offset-2 link-underline link-underline-opacity-0">Eliminar</Link></button>
+                    <button type="button" className="btn btn-sm btn-outline-danger"
+                    onClick={() => removePost(e.id)}
+                  >Eliminar</button>
                 </div>
               </div>
             </div>
