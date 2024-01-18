@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import LayoutUser from './components/LayoutUser';
 import LayoutAdmin from './components/LayoutAdmin';
 import PostAddScreen from './components/PostAddScreen';
-import Home from './components/home';
+import Home from './components/Home';
 import PostScreen from './components/PostScreen';
 import CategoryScreen from './components/CategoryScreen';
 import AdminHome from './components/AdminHome';

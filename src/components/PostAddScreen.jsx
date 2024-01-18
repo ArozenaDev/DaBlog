@@ -33,7 +33,7 @@ export default function PostAddScreen() {
           <span className="input-group-text" id="basic-addon1">
                  Contenido:
             </span>
-          <Field as="textarea" type="text" name="content" placeholder="Introduce el contenido de tu post" className="form-control" />
+          <Field as="textarea" name="content" placeholder="Introduce el contenido de tu post" className="form-control" />
           </div>
           <div className="input-group mb-3">
           <span className="input-group-text" id="basic-addon1">
